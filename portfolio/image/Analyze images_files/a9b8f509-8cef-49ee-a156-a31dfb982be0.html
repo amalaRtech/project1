@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://labclient.labondemand.com/Instructions/a9b8f509-8cef-49ee-a156-a31dfb982be0 -->
+<html lang="en-US" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Analyze images</title>
+    <link rel="shortcut icon" href="https://labclient.labondemand.com/images/favicon-32x32.png">
+    <script async="" src="./datadog-logs.js.download"></script><script async="" src="./pendo.js.download"></script><script src="./jquery.min(1).js.download"></script>
+    <script src="./jquery-ui.min(1).js.download"></script>
+    <script src="./showdown.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./prettify.css">
+    <script src="./yaml.min.js.download"></script>
+    <script src="./jquery.timepicker.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./jquery.timepicker.css">
+    <script src="./LocalizeTo(1)" type="text/javascript"></script>
+<script src="./CustomerSupportApp.js.download" type="text/javascript" script-src="" 'self'="" http:="" *="" https:="" 'unsafe-inline'="" 'unsafe-eval'=""></script><script src="./LocalizeTo(2)" type="text/javascript"></script>    <script src="./string-functions.js.download"></script>
+    <script src="./LocalizeTo(3)" type="text/javascript"></script>
+    <link href="./jquery-ui.css" rel="stylesheet">
+    <link href="./lab-client-layout-v2.css" rel="stylesheet" type="text/css">
+    <link id="themeStylesheet" href="./styles-v2" rel="stylesheet" type="text/css">
+
+
+        <script src="./lab-client-api.js.download"></script>
+</head>
+<body class="instructions-client childClient integrated-layout">
+    <div id="labClient" style="">
+        <div class="lab-client-header" role="banner">
+
+            <div class="header-left">
+                <div class="theme-logo"></div>
+                <div id="labName" class="lab-name" role="heading" aria-level="1">
+                    <span id="instanceName" title="Analyze images">Analyze images</span>
+                </div>
+            </div>
+
+                    <a href="https://labclient.labondemand.com/Instructions/a9b8f509-8cef-49ee-a156-a31dfb982be0#" id="exit" class="exit-button cancel-button icon-link" role="button" aria-label="End">End</a>
+                <div id="exitMenu" class="menu" role="menu" aria-label="Exit Menu" aria-haspopup="true" aria-expanded="false">
+                        <div id="exit" class="menu-item cancel-button icon-link" tabindex="0" role="menuitem" aria-label="End Lab">End Lab</div>
+                </div>
+        </div>
+
+        <div class="tab-headings primary-color-low-opacity-border" role="navigation">
+            <div id="tabHolder" class="tab-holder">
+                    <a tabindex="0" class="tabHeading tab-heading primary-color-border selected" aria-selected="true" role="tab" aria-label="Instructions" data-target="instructionsTab" data-id="0">Instructions</a>
+                    <a tabindex="0" class="tabHeading tab-heading primary-color-border " aria-selected="false" role="tab" aria-label="Resources" data-target="resourcesTab" data-id="1">Resources</a>
+            </div>
+            <div class="icon-holder">
+                <a tabindex="0" id="notificationsButton" data-target="notifications-menu" class="notifications-button modal-menu-button icon primary-color-icon " role="button" aria-label="Notifications" title="Notifications"></a>
+                    <a tabindex="0" data-target="help-menu" class="help-button modal-menu-button icon primary-color-icon" role="button" aria-label="Help" title="Help"></a>
+                <a tabindex="0" data-target="settings-menu" class="settings-button modal-menu-button icon primary-color-icon" role="button" aria-label="Settings" title="Settings"></a>
+            </div>
+        </div>
+
+        <div class="tabs" role="main">
+            <div id="instructionsTab" class="tab selected">
+                <div id="instructionsContent" class="tab-content withFooter instructions withTaskProgress withNavigation" aria-label="Lab Instructions">
+                    <div class="zoomable" id="pages"><div class="page" id="page0"><include src="https://raw.githubusercontent.com/LODSContent/All-MOC/master/MOC/en/tap_alert.md" data-name=" "><blockquote class="alert">
+  <p>Microsoft has implemented increased security requirements on Microsoft accounts to require Multifactor Authentication (MFA). To prevent the need for you to utilize an Authenticator application, Skillable has implemented an update to our Cloud Slice solution in this lab and it now uses a Temporary Access Pass (TAP) token.</p>
+  <p>This TAP token is a replacement to the password and prevents the need to authenticate via MFA. The password has been replaced with the provided TAP token in this lab's instructions and both the password and TAP token can be found in your Resources tab at any time. </p>
+</blockquote></include>
+<h2 id="important-information">Important information</h2>
+<p>Read this before you start</p>
+<p>In this hosted lab environment, there are some restrictions on the resource names, credentials, and other values you can use. In this exercise, you must use the following values:</p>
+<h3 id="windows-credentials">Windows credentials:</h3>
+<p>Use these credentials to sign into Windows:</p>
+<ul>
+<li><strong>User name</strong>: <span class="typeText" title="Type Text" tabindex="0" role="button">Admin</span></li>
+<li><strong>Password</strong>: <span class="typeText" title="Type Text" tabindex="0" role="button">Pa55w.rd</span></li>
+</ul>
+<h3 id="azure-credentials">Azure credentials</h3>
+<p>Use these credentials to sign into Azure:</p>
+<ul>
+<li><strong>Email address</strong>: <span class="typeText" title="Type Text" tabindex="0" role="button">User1-57057083@LODSPRODMSLEARNMCA.onmicrosoft.com</span></li>
+<li><strong>Temporary Access Pass (TAP)</strong>: <span class="typeText" title="Type Text" tabindex="0" role="button">CjGheCg3</span></li>
+</ul>
+<h3 id="azure-resources">Azure resources</h3>
+<p>Use these names when creating resources in Azure</p>
+<ul>
+<li><strong>Resource group</strong>: <span class="typeText" title="Type Text" tabindex="0" role="button">ResourceGroup1</span></li>
+<li><strong>Computer Vision</strong>: <span class="typeText" title="Type Text" tabindex="0" role="button">vision57057083</span></li>
+</ul>
+<p>For all other resources, use the default name.</p>
+<blockquote>
+  <p><strong>Tip</strong>: As you follow the instructions in this pane, whenever you see a <span class="typeText" title="Type Text" tabindex="0" role="button">icon</span>, you can use it to copy text from the instruction pane into the virtual machine interface (other than to a cloud shell command line). This is particularly useful to copy code; but bear in mind you may need to modify the pasted code to fix indent levels or formatting before running it!</p>
+</blockquote>
+<include src="https://raw.githubusercontent.com/LODSContent/All-MOC/refs/heads/master/MOC/en/MultiLineCodeHint.md" data-name=" "><blockquote class="hint">
+  <p>If you have to copy multiple lines within a code block into an application or cloud shell prompt, consider using Notepad as an intermediate step by doing the following:</p>
+  <ol class="taskList">
+  <li class="task-list-item" id="taskIndex0"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex0"><span></span></label>Open Notepad.</li>
+  <li class="task-list-item" id="taskIndex1"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex1"><span></span></label>Select the <span class="typeText" title="Type Text" tabindex="0" role="button"></span> symbol beside the code block to copy the code block into Notepad. </li>
+  <li class="task-list-item" id="taskIndex2"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex2"><span></span></label>Select the lines of code you copied into Notepad and paste them into the application or cloud shell prompt.</li>
+  </ol>
+</blockquote></include>
+<p>Now, when you're ready, go to the next page to start the exercise.</p>
+<p></p></div><div class="page selected" id="page1">
+
+<include src="https://raw.githubusercontent.com/LODSContent/All-MOC/refs/heads/master/MOC/en/MultiLineCodeHint.md" data-name=""><blockquote class="hint">
+  <p>If you have to copy multiple lines within a code block into an application or cloud shell prompt, consider using Notepad as an intermediate step by doing the following:</p>
+  <ol class="taskList">
+  <li class="task-list-item" id="taskIndex41"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex41"><span></span></label>Open Notepad.</li>
+  <li class="task-list-item" id="taskIndex42"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex42"><span></span></label>Select the <span class="typeText" title="Type Text" tabindex="0" role="button"></span> symbol beside the code block to copy the code block into Notepad. </li>
+  <li class="task-list-item" id="taskIndex43"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex43"><span></span></label>Select the lines of code you copied into Notepad and paste them into the application or cloud shell prompt.</li>
+  </ol>
+</blockquote></include><p></p>
+<include src="https://raw.githubusercontent.com/MicrosoftLearning/mslearn-ai-vision/main/Instructions/Labs/01-analyze-images.md" data-name=" "><h1 id="analyze-images">Analyze images</h1>
+<p>Azure AI Vision is an artificial intelligence capability that enables software systems to interpret visual input by analyzing images. In Microsoft Azure, the <strong>Vision</strong> Azure AI service provides pre-built models for common computer vision tasks, including analysis of images to suggest captions and tags, detection of common objects and people. You can also use the Azure AI Vision service to remove the background or create a foreground matting of images.</p>
+<blockquote>
+  <p><strong>Note</strong>: This exercise is based on pre-release SDK software, which may be subject to change. Where necessary, we've used specific versions of packages; which may not reflect the latest available versions. You may experience some unexpected behavior, warnings, or errors.</p>
+</blockquote>
+<p>While this exercise is based on the Azure Vision Python SDK, you can develop vision applications using multiple language-specific SDKs; including:</p>
+<ul>
+<li><a class="icon-link external-link" href="https://www.npmjs.com/package/@azure-rest/ai-vision-image-analysis" target="_blank" aria-label="(opens a new window)">Azure AI Vision Analysis for JavaScript</a></li>
+<li><a class="icon-link external-link" href="https://www.nuget.org/packages/Azure.AI.Vision.ImageAnalysis" target="_blank" aria-label="(opens a new window)">Azure AI Vision Analysis for Microsoft .NET</a></li>
+<li><a class="icon-link external-link" href="https://mvnrepository.com/artifact/com.azure/azure-ai-vision-imageanalysis" target="_blank" aria-label="(opens a new window)">Azure AI Vision Analysis for Java</a></li>
+</ul>
+<p>This exercise takes approximately <strong>30</strong> minutes.</p>
+<h2 id="provision-an-azure-ai-vision-resource">Provision an Azure AI Vision resource</h2>
+<p>If you don't already have one in your subscription, you'll need to provision an Azure AI Vision resource.</p>
+<blockquote>
+  <p><strong>Note</strong>: In this exercise, you'll use a standalone <strong>Computer Vision</strong> resource. You can also use Azure AI Vision services in an <em>Azure AI Services</em> multi-service resource, either directly or in an <em>Azure AI Foundry</em> project.</p>
+</blockquote>
+<ol class="taskList">
+<li class="task-list-item" id="taskIndex3"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex3"><span></span></label>Open the <a class="icon-link external-link" href="https://portal.azure.com/" target="_blank" aria-label="(opens a new window)">Azure portal</a> at <code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">https</span><span class="pun">:</span><span class="com">//portal.azure.com</span></code>, and sign in using the username <span class="typeText" title="Type Text" tabindex="0" role="button">User1-57057083@LODSPRODMSLEARNMCA.onmicrosoft.com</span> and the TAP <span class="typeText" title="Type Text" tabindex="0" role="button">CjGheCg3</span>. Close any welcome messages or tips that are displayed.</p></li>
+<li class="task-list-item" id="taskIndex4"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex4"><span></span></label>Select <strong>Create a resource</strong>.</p></li>
+<li class="task-list-item" id="taskIndex5"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex5"><span></span></label>In the search bar, search for <code class="prettyprint prettyprinted" tabindex="0" style=""><span class="typ">Computer</span><span class="pln"> </span><span class="typ">Vision</span></code>, select <strong>Computer Vision</strong>, and create the resource with the following settings:</p>
+<ul>
+<li><strong>Subscription</strong>: <em>Your Azure subscription</em></li>
+<li><strong>Resource group</strong>: ResourceGroup1</li>
+<li><strong>Region</strong>: <span class="typeText" title="Type Text" tabindex="0" role="button">southeastasia</span></li>
+<li><strong>Name</strong>: <em><span class="typeText" title="Type Text" tabindex="0" role="button">vision57057083</span></em></li>
+<li><strong>Pricing tier</strong>: Free F0</li></ul>
+<p>*Azure AI Vision 4.0 full feature sets are currently only available in these regions.</p></li>
+<li class="task-list-item" id="taskIndex6"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex6"><span></span></label>Select the required checkboxes and create the resource.</p></li>
+<li class="task-list-item" id="taskIndex7"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex7"><span></span></label>Wait for deployment to complete, and then view the deployment details.</p></li>
+<li class="task-list-item" id="taskIndex8"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex8"><span></span></label>When the resource has been deployed, go to it and under the <strong>Resource management</strong> node in the navigation pane, view its <strong>Keys and Endpoint</strong> page. You will need the endpoint and one of the keys from this page in the next procedure.</p></li>
+</ol>
+<h2 id="develop-an-image-analysis-app-with-the-azure-ai-vision-sdk">Develop an image analysis app with the Azure AI Vision SDK</h2>
+<p>In this exercise, you'll complete a partially implemented client application that uses the Azure AI Vision SDK to analyze images.</p>
+<h3 id="prepare-the-application-configuration">Prepare the application configuration</h3>
+<ol class="taskList">
+<li class="task-list-item" id="taskIndex9"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex9"><span></span></label>In the Azure portal, use the <strong>[&gt;_]</strong> button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a <strong><em>PowerShell</em></strong> environment with no storage in your subscription.</p>
+<p>The cloud shell provides a command-line interface in a pane at the bottom of the Azure portal.</p>
+<blockquote>
+  <p><strong>Note</strong>: If you have previously created a cloud shell that uses a <em>Bash</em> environment, switch it to <strong><em>PowerShell</em></strong>.</p>
+</blockquote>
+<blockquote>
+  <p><strong>Note</strong>: If the portal asks you to select a storage to persist your files, choose <strong>No storage account required</strong>, select the subscription you are using and press <strong>Apply</strong>.</p>
+</blockquote></li>
+<li class="task-list-item" id="taskIndex10"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex10"><span></span></label>In the cloud shell toolbar, in the <strong>Settings</strong> menu, select <strong>Go to Classic version</strong> (this is required to use the code editor).</p>
+<p><strong><font color="red">Ensure you've switched to the classic version of the cloud shell before continuing.</font></strong></p></li>
+<li class="task-list-item" id="taskIndex11"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex11"><span></span></label>Resize the cloud shell pane so you can still see the <strong>Keys and Endpoint</strong> page for your Computer Vision resource.</p>
+<blockquote>
+  <p><strong>Tip</strong>" You can resize the pane by dragging the top border. You can also use the minimize and maximize buttons to switch between the cloud shell and the main portal interface.</p>
+</blockquote></li>
+<li class="task-list-item" id="taskIndex12"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex12"><span></span></label>In the cloud shell pane, enter the following commands to clone the GitHub repo containing the code files for this exercise (type the command, or copy it to the clipboard and then right-click in the command line and paste as plain text):</p>
+<pre><div class="codeTitle"><span class="title"></span><span class="buttons"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">rm </span><span class="pun">-</span><span class="pln">r mslearn</span><span class="pun">-</span><span class="pln">ai</span><span class="pun">-</span><span class="pln">vision </span><span class="pun">-</span><span class="pln">f
+git clone https</span><span class="pun">:</span><span class="com">//github.com/MicrosoftLearning/mslearn-ai-vision</span></code></pre>
+<blockquote>
+  <p><strong>Tip</strong>: As you paste commands into the cloudshell, the output may take up a large amount of the screen buffer. You can clear the screen by entering the <code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">cls</span></code> command to make it easier to focus on each task.</p>
+</blockquote></li>
+<li class="task-list-item" id="taskIndex13"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex13"><span></span></label>After the repo has been cloned, use the following command to navigate to and view the folder containing the application code files:   </p>
+<pre><div class="codeTitle"><span class="title"></span><span class="buttons"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">cd mslearn</span><span class="pun">-</span><span class="pln">ai</span><span class="pun">-</span><span class="pln">vision</span><span class="pun">/</span><span class="typ">Labfiles</span><span class="pun">/</span><span class="pln">analyze</span><span class="pun">-</span><span class="pln">images</span><span class="pun">/</span><span class="pln">python</span><span class="pun">/</span><span class="pln">image</span><span class="pun">-</span><span class="pln">analysis
+ls </span><span class="pun">-</span><span class="pln">a </span><span class="pun">-</span><span class="pln">l</span></code></pre>
+<p>The folder contains application configuration and code files for your app. It also contains a <strong>/images</strong> subfolder, which contains some image files for your app to analyze.</p></li>
+<li class="task-list-item" id="taskIndex14"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex14"><span></span></label>Install the Azure AI Vision SDK package and other required packages by running the following commands:</p>
+<pre><div class="codeTitle"><span class="title"></span><span class="buttons"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">python </span><span class="pun">-</span><span class="pln">m venv labenv
+</span><span class="pun">./</span><span class="pln">labenv</span><span class="pun">/</span><span class="pln">bin</span><span class="pun">/</span><span class="typ">Activate</span><span class="pun">.</span><span class="pln">ps1
+pip install </span><span class="pun">-</span><span class="pln">r requirements</span><span class="pun">.</span><span class="pln">txt azure</span><span class="pun">-</span><span class="pln">ai</span><span class="pun">-</span><span class="pln">vision</span><span class="pun">-</span><span class="pln">imageanalysis</span><span class="pun">==</span><span class="lit">1.0</span><span class="pun">.</span><span class="lit">0</span></code></pre></li>
+<li class="task-list-item" id="taskIndex15"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex15"><span></span></label>Enter the following command to edit the configuration file for your app:</p>
+<pre><div class="codeTitle"><span class="title"></span><span class="buttons"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">code </span><span class="pun">.</span><span class="pln">env</span></code></pre>
+<p>The file is opened in a code editor.</p></li>
+<li class="task-list-item" id="taskIndex16"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex16"><span></span></label>In the code file, update the configuration values it contains to reflect the <strong>endpoint</strong> and an authentication <strong>key</strong> for your Computer Vision resource (copied from its <strong>Keys and Endpoint</strong> page in the Azure portal).</p></li>
+<li class="task-list-item" id="taskIndex17"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex17"><span></span></label>After you've replaced the placeholders, use the <strong>CTRL+S</strong> command to save your changes and then use the <strong>CTRL+Q</strong> command to close the code editor while keeping the cloud shell command line open.</p></li>
+</ol>
+<h3 id="add-code-to-suggest-a-caption">Add code to suggest a caption</h3>
+<ol class="taskList">
+<li class="task-list-item" id="taskIndex18"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex18"><span></span></label>In the cloud shell command line, enter the following command to open the code file for the client application:</p>
+<pre><div class="codeTitle"><span class="title"></span><span class="buttons"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">code image</span><span class="pun">-</span><span class="pln">analysis</span><span class="pun">.</span><span class="pln">py</span></code></pre>
+<blockquote>
+  <p><strong>Tip</strong>: You might want to maximize the cloud shell pane and move the split-bar between the command line cosole and the code editor so you can see the code more easily.</p>
+</blockquote></li>
+<li class="task-list-item" id="taskIndex19"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex19"><span></span></label>In the code file, find the comment <strong>Import namespaces</strong>, and add the following code to import the namespaces you will need to use the Azure AI Vision SDK:</p>
+<pre><div class="codeTitle"><span class="title">python</span><span class="title"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="python language-python prettyprint prettyprinted" tabindex="0" style=""><span class="com"># import namespaces</span><span class="pln">
+</span><span class="kwd">from</span><span class="pln"> azure</span><span class="pun">.</span><span class="pln">ai</span><span class="pun">.</span><span class="pln">vision</span><span class="pun">.</span><span class="pln">imageanalysis </span><span class="kwd">import</span><span class="pln"> </span><span class="typ">ImageAnalysisClient</span><span class="pln">
+</span><span class="kwd">from</span><span class="pln"> azure</span><span class="pun">.</span><span class="pln">ai</span><span class="pun">.</span><span class="pln">vision</span><span class="pun">.</span><span class="pln">imageanalysis</span><span class="pun">.</span><span class="pln">models </span><span class="kwd">import</span><span class="pln"> </span><span class="typ">VisualFeatures</span><span class="pln">
+</span><span class="kwd">from</span><span class="pln"> azure</span><span class="pun">.</span><span class="pln">core</span><span class="pun">.</span><span class="pln">credentials </span><span class="kwd">import</span><span class="pln"> </span><span class="typ">AzureKeyCredential</span></code></pre></li>
+<li class="task-list-item" id="taskIndex20"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex20"><span></span></label>In the <strong>Main</strong> function, note that the code to load the configuration settings and determine the image file to be analyzed has been provided. Then find the comment <strong>Authenticate Azure AI Vision client</strong> and add the following code to create and authenticate a Azure AI Vision client object (be sure to maintain the correct indentation levels):</p>
+<pre><div class="codeTitle"><span class="title">python</span><span class="title"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="python language-python prettyprint prettyprinted" tabindex="0" style=""><span class="com"># Authenticate Azure AI Vision client</span><span class="pln">
+cv_client </span><span class="pun">=</span><span class="pln"> </span><span class="typ">ImageAnalysisClient</span><span class="pun">(</span><span class="pln">
+    endpoint</span><span class="pun">=</span><span class="pln">ai_endpoint</span><span class="pun">,</span><span class="pln">
+    credential</span><span class="pun">=</span><span class="typ">AzureKeyCredential</span><span class="pun">(</span><span class="pln">ai_key</span><span class="pun">))</span></code></pre></li>
+<li class="task-list-item" id="taskIndex21"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex21"><span></span></label>In the <strong>Main</strong> function, under the code you just added, find the comment <strong>Analyze image</strong> and add the following code:</p>
+<pre><div class="codeTitle"><span class="title">python</span><span class="title"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="python language-python prettyprint prettyprinted" tabindex="0" style=""><span class="com"># Analyze image</span><span class="pln">
+</span><span class="kwd">with</span><span class="pln"> open</span><span class="pun">(</span><span class="pln">image_file</span><span class="pun">,</span><span class="pln"> </span><span class="str">"rb"</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> f</span><span class="pun">:</span><span class="pln">
+    image_data </span><span class="pun">=</span><span class="pln"> f</span><span class="pun">.</span><span class="pln">read</span><span class="pun">()</span><span class="pln">
+</span><span class="kwd">print</span><span class="pun">(</span><span class="pln">f</span><span class="str">'\nAnalyzing {image_file}\n'</span><span class="pun">)</span><span class="pln">
+
+result </span><span class="pun">=</span><span class="pln"> cv_client</span><span class="pun">.</span><span class="pln">analyze</span><span class="pun">(</span><span class="pln">
+    image_data</span><span class="pun">=</span><span class="pln">image_data</span><span class="pun">,</span><span class="pln">
+    visual_features</span><span class="pun">=[</span><span class="pln">
+        </span><span class="typ">VisualFeatures</span><span class="pun">.</span><span class="pln">CAPTION</span><span class="pun">,</span><span class="pln">
+        </span><span class="typ">VisualFeatures</span><span class="pun">.</span><span class="pln">DENSE_CAPTIONS</span><span class="pun">,</span><span class="pln">
+        </span><span class="typ">VisualFeatures</span><span class="pun">.</span><span class="pln">TAGS</span><span class="pun">,</span><span class="pln">
+        </span><span class="typ">VisualFeatures</span><span class="pun">.</span><span class="pln">OBJECTS</span><span class="pun">,</span><span class="pln">
+        </span><span class="typ">VisualFeatures</span><span class="pun">.</span><span class="pln">PEOPLE</span><span class="pun">],</span><span class="pln">
+</span><span class="pun">)</span></code></pre></li>
+<li class="task-list-item" id="taskIndex22"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex22"><span></span></label>Find the comment <strong>Get image captions</strong>, add the following code to display image captions and dense captions:</p>
+<pre><div class="codeTitle"><span class="title">python</span><span class="title"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="python language-python prettyprint prettyprinted" tabindex="0" style=""><span class="com"># Get image captions</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">caption </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> </span><span class="kwd">None</span><span class="pun">:</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"\nCaption:"</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">" Caption: '{}' (confidence: {:.2f}%)"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">result</span><span class="pun">.</span><span class="pln">caption</span><span class="pun">.</span><span class="pln">text</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">caption</span><span class="pun">.</span><span class="pln">confidence </span><span class="pun">*</span><span class="pln"> </span><span class="lit">100</span><span class="pun">))</span><span class="pln">
+
+</span><span class="kwd">if</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">dense_captions </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> </span><span class="kwd">None</span><span class="pun">:</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"\nDense Captions:"</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> caption </span><span class="kwd">in</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">dense_captions</span><span class="pun">.</span><span class="pln">list</span><span class="pun">:</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">" Caption: '{}' (confidence: {:.2f}%)"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">caption</span><span class="pun">.</span><span class="pln">text</span><span class="pun">,</span><span class="pln"> caption</span><span class="pun">.</span><span class="pln">confidence </span><span class="pun">*</span><span class="pln"> </span><span class="lit">100</span><span class="pun">))</span></code></pre></li>
+<li class="task-list-item" id="taskIndex23"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex23"><span></span></label>Save your changes (<em>CTRL+S</em>) and resize the panes so you can clearly see the command line console while keeping the code editor open. Then enter the following command to run the program with the argument <strong>images/street.jpg</strong>:</p>
+<pre><div class="codeTitle"><span class="title"></span><span class="buttons"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">python image</span><span class="pun">-</span><span class="pln">analysis</span><span class="pun">.</span><span class="pln">py images</span><span class="pun">/</span><span class="pln">street</span><span class="pun">.</span><span class="pln">jpg</span></code></pre></li>
+<li class="task-list-item" id="taskIndex24"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex24"><span></span></label>Observe the output, which should include a suggested caption for the <strong>street.jpg</strong> image, which looks like this:</p>
+<p>
+<img src="./street.jpg" alt="A picture of a busy street."></p></li>
+<li class="task-list-item" id="taskIndex25"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex25"><span></span></label>Run the program again, this time with the argument <strong>images/building.jpg</strong> to see the caption that gets generated for the <strong>building.jpg</strong> image, which looks like this:</p>
+<p>
+<img src="./building.jpg" alt="A picture of a building."></p></li>
+<li class="task-list-item" id="taskIndex26"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex26"><span></span></label>Repeat the previous step to generate a caption for the <strong>images/person.jpg</strong> file, which looks like this:</p>
+<p>
+<img src="./person.jpg" alt="A picture of a person."></p></li>
+</ol>
+<h3 id="add-code-to-generate-suggested-tags">Add code to generate suggested tags</h3>
+<p>It can sometimes be useful to identify relevant <em>tags</em> that provide clues about the contents of an image.</p>
+<ol class="taskList">
+<li class="task-list-item" id="taskIndex27"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex27"><span></span></label>In the code editor, in the <strong>AnalyzeImage</strong> function, find the comment <strong>Get image tags</strong> and add the following code:</p>
+<pre><div class="codeTitle"><span class="title">python</span><span class="title"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="python language-python prettyprint prettyprinted" tabindex="0" style=""><span class="com"># Get image tags</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">tags </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> </span><span class="kwd">None</span><span class="pun">:</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"\nTags:"</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> tag </span><span class="kwd">in</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">tags</span><span class="pun">.</span><span class="pln">list</span><span class="pun">:</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">" Tag: '{}' (confidence: {:.2f}%)"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">tag</span><span class="pun">.</span><span class="pln">name</span><span class="pun">,</span><span class="pln"> tag</span><span class="pun">.</span><span class="pln">confidence </span><span class="pun">*</span><span class="pln"> </span><span class="lit">100</span><span class="pun">))</span></code></pre></li>
+<li class="task-list-item" id="taskIndex28"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex28"><span></span></label>Save your changes (<em>CTRL+S</em>) and run the program with the argument <strong>images/street.jpg</strong>, observing that in addition to the image caption, a list of suggested tags is displayed.</p></li>
+<li class="task-list-item" id="taskIndex29"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex29"><span></span></label>Rerun the program for the <strong>images/building.jpg</strong> and <strong>images/person.jpg</strong> files.</p></li>
+</ol>
+<h3 id="add-code-to-detect-and-locate-objects">Add code to detect and locate objects</h3>
+<ol class="taskList">
+<li class="task-list-item" id="taskIndex30"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex30"><span></span></label>In the code editor, in the <strong>AnalyzeImage</strong> function, find the comment <strong>Get objects in the image</strong> and add the following code to list the objects detected in the image, and call the provided function to annotate an image with the detected objects:</p>
+<pre><div class="codeTitle"><span class="title">python</span><span class="title"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="python language-python prettyprint prettyprinted" tabindex="0" style=""><span class="com"># Get objects in the image</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">objects </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> </span><span class="kwd">None</span><span class="pun">:</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"\nObjects in image:"</span><span class="pun">)</span><span class="pln">
+    </span><span class="kwd">for</span><span class="pln"> detected_object </span><span class="kwd">in</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">objects</span><span class="pun">.</span><span class="pln">list</span><span class="pun">:</span><span class="pln">
+        </span><span class="com"># Print object tag and confidence</span><span class="pln">
+        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">" {} (confidence: {:.2f}%)"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">detected_object</span><span class="pun">.</span><span class="pln">tags</span><span class="pun">[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">name</span><span class="pun">,</span><span class="pln"> detected_object</span><span class="pun">.</span><span class="pln">tags</span><span class="pun">[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">confidence </span><span class="pun">*</span><span class="pln"> </span><span class="lit">100</span><span class="pun">))</span><span class="pln">
+    </span><span class="com"># Annotate objects in the image</span><span class="pln">
+    show_objects</span><span class="pun">(</span><span class="pln">image_file</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">objects</span><span class="pun">.</span><span class="pln">list</span><span class="pun">)</span></code></pre></li>
+<li class="task-list-item" id="taskIndex31"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex31"><span></span></label>Save your changes (<em>CTRL+S</em>) and run the program with the argument <strong>images/street.jpg</strong>, observing that in addition to the image caption and suggested tags; a file named <strong>objects.jpg</strong> is generated.</p></li>
+<li class="task-list-item" id="taskIndex32"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex32"><span></span></label>Use the (Azure cloud shell-specific) <strong>download</strong> command to download the <strong>objects.jpg</strong> file:</p>
+<pre><div class="codeTitle"><span class="title"></span><span class="buttons"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">download objects</span><span class="pun">.</span><span class="pln">jpg</span></code></pre>
+<p>The download command creates a popup link at the bottom right of your browser, which you can select to download and open the file. The image should look similar to this:</p>
+<p>
+<img src="./objects.jpg" alt="An image with object boundary boxes."></p></li>
+<li class="task-list-item" id="taskIndex33"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex33"><span></span></label>Rerun the program for the <strong>images/building.jpg</strong> and <strong>images/person.jpg</strong> files, downloading the generated objects.jpg file after each run.</p></li>
+</ol>
+<h3 id="add-code-to-detect-and-locate-people">Add code to detect and locate people</h3>
+<ol class="taskList">
+<li class="task-list-item" id="taskIndex34"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex34"><span></span></label>In the code editor, in the <strong>AnalyzeImage</strong> function, find the comment <strong>Get people in the image</strong> and add the following code to list any detected people with a confidence level of 20% or more, and call a provided function to annotate them in an image:</p>
+<pre><div class="codeTitle"><span class="title">Python</span><span class="title"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="Python language-Python prettyprint prettyprinted" tabindex="0" style=""><span class="com"># Get people in the image</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">people </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">not</span><span class="pln"> </span><span class="kwd">None</span><span class="pun">:</span><span class="pln">
+    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"\nPeople in image:"</span><span class="pun">)</span><span class="pln">
+
+    </span><span class="kwd">for</span><span class="pln"> detected_person </span><span class="kwd">in</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">people</span><span class="pun">.</span><span class="pln">list</span><span class="pun">:</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> detected_person</span><span class="pun">.</span><span class="pln">confidence </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0.2</span><span class="pun">:</span><span class="pln">
+            </span><span class="com"># Print location and confidence of each person detected</span><span class="pln">
+            </span><span class="kwd">print</span><span class="pun">(</span><span class="str">" {} (confidence: {:.2f}%)"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">detected_person</span><span class="pun">.</span><span class="pln">bounding_box</span><span class="pun">,</span><span class="pln"> detected_person</span><span class="pun">.</span><span class="pln">confidence </span><span class="pun">*</span><span class="pln"> </span><span class="lit">100</span><span class="pun">))</span><span class="pln">
+    </span><span class="com"># Annotate people in the image</span><span class="pln">
+    show_people</span><span class="pun">(</span><span class="pln">image_file</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">.</span><span class="pln">people</span><span class="pun">.</span><span class="pln">list</span><span class="pun">)</span></code></pre></li>
+<li class="task-list-item" id="taskIndex35"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex35"><span></span></label>Save your changes (<em>CTRL+S</em>) and run the program with the argument <strong>images/street.jpg</strong>, observing that in addition to the image caption, suggested tags, and objects.jpg file; a list of person locations and file named <strong>people.jpg</strong> is generated.</p></li>
+<li class="task-list-item" id="taskIndex36"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex36"><span></span></label>Use the (Azure cloud shell-specific) <strong>download</strong> command to download the <strong>objects.jpg</strong> file:</p>
+<pre><div class="codeTitle"><span class="title"></span><span class="buttons"><span class="type-code-block">Type</span><span class="copy-code-block">Copy</span></span></div><code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">download people</span><span class="pun">.</span><span class="pln">jpg</span></code></pre>
+<p>The download command creates a popup link at the bottom right of your browser, which you can select to download and open the file. The image should look similar to this:</p>
+<p>
+<img src="./people.jpg" alt="An image with boundary boxes for detected people."></p></li>
+<li class="task-list-item" id="taskIndex37"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex37"><span></span></label>Rerun the program for the <strong>images/building.jpg</strong> and <strong>images/person.jpg</strong> files, downloading the generated people.jpg file after each run.</p></li>
+</ol>
+<blockquote>
+  <p><strong>Tip:</strong> If you see bounding boxes returned from the model that don't make sense, check the JSON confidence score and try increasing the confidence score filtering in your app.</p>
+</blockquote>
+<h2 id="clean-up-resources">Clean up resources</h2>
+<p>If you've finished exploring Azure AI Vision, you should delete the resources you have created in this exercise to avoid incurring unnecessary Azure costs:</p>
+<ol class="taskList">
+<li class="task-list-item" id="taskIndex38"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex38"><span></span></label>Open the Azure portal at <code class="prettyprint prettyprinted" tabindex="0" style=""><span class="pln">https</span><span class="pun">:</span><span class="com">//portal.azure.com</span></code>, and sign in using the Microsoft account associated with your Azure subscription.</p></li>
+<li class="task-list-item" id="taskIndex39"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex39"><span></span></label>In the top search bar, search for <em>Computer Vision</em>, and select the Computer Vision resource you created in this lab.</p></li>
+<li class="task-list-item" id="taskIndex40"><p><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex40"><span></span></label>On the resource page, select <strong>Delete</strong> and follow the instructions to delete the resource.</p></li>
+</ol></include>
+<h3 id="end-the-lab">End the lab</h3>
+<p>Please be sure to end the lab.</p></div></div>
+                </div>
+                <div class="instructions-footer primary-color-low-opacity-border">
+                    <div id="instructionsNavigation" class="instructions-navigation" role="navigation" aria-label="Previous/Next">
+                        <button id="previous" class="previous-button icon noselect" title="Previous" tabindex="0">Previous</button>
+                        <button id="next" class="next-button icon noselect" title="End">End</button>
+                    </div>
+                    <div class="progress-and-timer-wrapper">
+                        <div id="taskProgressBar" class="lab-progress-bar primary-color-low-opacity-background" tabindex="0" title="26/44 (59%) Tasks Complete" style="">
+                            <div id="taskProgress" class="lab-progress-fill primary-color-background" style="width: 59%;"></div>
+                        </div>
+                        <div id="timerWrapper" class="timer-wrapper">
+                            <span id="timer" class="timer primary-color" tabindex="0">54 Minutes Remaining</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="resourcesTab" class="tab  resources">
+                <div class="tab-content">
+                    <div class="zoomable">
+                        <div id="cloudCredentials"><div class="cloudCredential"><h2>Azure Portal</h2><table class="credentials fields"><tbody><tr><td class="fieldName">URL</td><td><a class="portalLink home icon-link special-action-link" href="https://portal.azure.com/#home">https://portal.azure.com/#home</a></td></tr><tr><td class="fieldName">Subscription</td><td><span class="typeText" title="Type Text" tabindex="0" role="button" aria-description="Azure Portal Type Text Subscription">5509f7a8-f31b-4168-8ccb-3bec14641003</span></td></tr><tr><td class="fieldName">Username</td><td><span class="typeText" title="Type Text" tabindex="0" role="button" aria-description="Azure Portal Type Text Username">User1-57057083@LODSPRODMSLEARNMCA.onmicrosoft.com</span></td></tr><tr><td class="fieldName">Password</td><td><span class="typeText" title="Type Text" tabindex="0" role="button" aria-description="Azure Portal Type Text Password">Mj9Hd7$!Bk3n</span></td></tr><tr><td class="fieldName"><abbr title="Temporary Access Pass">TAP</abbr></td><td><span class="typeText" title="Type Text" tabindex="0" role="button" aria-description="Azure Portal Type Text TAP">CjGheCg3</span></td></tr></tbody></table></div></div>
+                        <div id="cloudResources"><div class="cloudResourceGroup"><h2>Resource Group<div class="description">ResourceGroup1</div></h2></div></div>
+                        <div id="resourcesExtensions"><div class="machine hoverColor selectedColor activeColor accent-background selected" id="machine235869"><img alt="Thumbnail screenshot of virtual machineLab57057083-ML - SEA-Dev" class="thumbnail" src="./saved_resource">
+            <div class="machineNameCenter">
+                <div class="machineName">ML - SEA-Dev</div>
+            </div>
+            <div class="inputRelease">
+                To release mouse, press <strong>Ctrl+Alt+Left Arrow</strong>
+            </div>
+            <div class="machineInfo" style="">
+                <table class="credentials fields">
+                    <tbody><tr>
+                        <td class="fieldName">Username</td>
+                        <td><span class="typeText username" title="Type Text" role="button" tabindex="0" aria-description="ML - SEA-Dev Type Text Username">Admin</span></td>
+                    </tr>
+                    <tr>
+                        <td class="fieldName">Password</td>
+                        <td><span class="typeText password" title="Type Text" role="button" tabindex="0" aria-description="ML - SEA-Dev Type Text Password">Pa55w.rd</span></td>
+                    </tr>
+                </tbody></table>
+                <div class="floppyDrive" style="display: none;">
+                </div>
+                <div class="dvdDrive">
+                    <div class="dvdDriveInner" style="display:none;">
+                        <div class="selectHeading">DVD Drive</div>
+                        <select>
+                            <option value="-2">No Media</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="networkAdapters"></div>
+                <input type="button" class="ctrlAltDel ctrl-alt-del-button" value="Ctrl+Alt+Delete">
+                    <a class="openInNewWindow open-in-new-window-link icon-link" href="https://labclient.labondemand.com/Instructions/a9b8f509-8cef-49ee-a156-a31dfb982be0#">Open in New Window</a>
+            </div>
+        </div></div>
+                        <div id="containers"></div>
+                        <div id="externalResources"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="help-menu" class="modal-menu page-background-color" role="dialog" aria-modal="true" aria-labelledby="help-menu-title">
+                <div class="modal-menu-title-bar primary-color-background">
+                    <h2 id="help-menu-title" class="modal-menu-title">Help</h2>
+                    <span><a class="close-modal-menu-button" tabindex="0" role="button" aria-label="Close" title="Close"></a></span>
+                </div>
+                <div class="modal-menu-content">
+                    <div class="support-information accent-background">
+                        <h3 class="title">
+                            Support Information
+                        </h3>
+                        <table class="fields">
+                            <tbody><tr>
+                                <td class="fieldName">ID</td>
+                                <td>57057083</td>
+                            </tr>
+                                <tr>
+                                    <td class="fieldName">Host</td>
+                                    <td>SGP-HV21</td>
+                                </tr>
+                                <tr>
+                                    <td class="fieldName">Datacenter</td>
+                                    <td>Southeast Asia</td>
+                                </tr>
+                        </tbody></table>
+                    </div>
+
+                    <div id="helpExtensions"></div>
+
+                        <h3>FAQs</h3>
+                        <a href="https://docs.skillable.com/docs/student-faq" target="_blank" class="external-link icon-link" aria-label="Frequently asked questions about the lab interface (opens a new window)">Frequently asked questions about the lab interface</a>
+
+                    <h3>Other Help Options</h3>
+
+                            <div class="link-list-item"><span id="supportTicketLink"><a class="cslink formsubmit topnav" href="javascript:void(0);" id="cslink_supportlink" target="_blank" aria-label="Help (opens a new window)">Help</a></span></div>
+
+
+
+                        <div class="skillable-branding-block">
+                            Powered by <a href="https://skillable.com/solutions" target="_blank" aria-label="Skillable (opens a new window)">Skillable</a>
+                            <span class="skillable-links-separator">•</span>
+                            <a target="_blank" href="https://www.g2.com/contributor/learnondemand-vs?secure%5Bpage_id%5D=Learnondemand-vs&amp;secure%5Brewards%5D=true&amp;secure%5Btoken%5D=839b2cb7a5a16a9e17bef29619706fee2de82770b3d2a6af507fee7a5ee54c7a" aria-label="Review Us (opens a new window)">Review Us</a>
+                        </div>
+                </div>
+            </div>
+            <div id="notifications-menu" class="modal-menu page-background-color" role="dialog" aria-modal="true" aria-labelledby="notifications-menu-title">
+                <div class="modal-menu-title-bar primary-color-background">
+                    <h2 id="notifications-menu-title" class="modal-menu-title">Notifications</h2>
+                    <span><a class="close-modal-menu-button" tabindex="0" role="button" aria-label="Close" title="Close"></a></span>
+                </div>     
+                <div class="modal-menu-content">
+
+                </div>
+            </div>
+            <div id="settings-menu" class="modal-menu page-background-color" role="dialog" aria-modal="true" aria-labelledby="settings-menu-title">
+                <div class="modal-menu-title-bar primary-color-background">
+                    <h2 id="settings-menu-title" class="modal-menu-title">Settings</h2>
+                    <span><a class="close-modal-menu-button" tabindex="0" role="button" aria-label="Close" title="Close"></a></span>
+                </div>
+                <div class="modal-menu-content">
+                    
+
+
+                    <h3 class="settings-heading primary-color">Text Size</h3>
+
+                    <div class="text-size-choice"><label><input type="radio" name="text-size" checked="" value="100"><span class="checkbox"></span>Standard</label></div>
+                    <div id="text-size-choice-large" class="text-size-choice"><label><input type="radio" name="text-size" value="150"><span class="checkbox"></span>Large Text</label></div>
+                    <div id="text-size-choice-extra-large" class="text-size-choice"><label><input type="radio" name="text-size" value="200"><span class="checkbox"></span>Extra Large Text</label></div>
+
+                    <hr>
+
+                        <h3 class="settings-heading primary-color"><label for="theme">Color Mode</label></h3>
+                        <div>
+                            <select id="theme">
+                                    <option value="5" data-name="green" data-style-sheet-url="/theme/styles-v2?themeId=0&amp;mode=light" selected="selected">Light</option>
+                                    <option value="20" data-name="dark" data-style-sheet-url="/theme/styles-v2?themeId=0&amp;mode=dark">Dark</option>
+                                    <option value="4" data-name="gray" data-style-sheet-url="/theme/styles-v2?themeId=0&amp;mode=highcontrast">High Contrast</option>
+                            </select>
+                        </div>
+                        <hr>
+
+                        <h3 class="settings-heading primary-color">Actions</h3>
+                        <div id="mainMenuExtensions"><div class="link-list-item"><a id="splitWindows" href="https://labclient.labondemand.com/Instructions/a9b8f509-8cef-49ee-a156-a31dfb982be0#" class="split-windows-link icon-link">Split Windows</a></div></div>                        
+
+                </div>
+            </div>
+        </div>
+        <div id="notificationContainer" role="region" aria-label="Notifications"></div>
+    </div>
+
+    <div id="fullScreenMessage" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="fullScreenMessageTitle" aria-describedby="fullScreenMessageText">
+        <div id="fullScreenMessageMask"></div>
+        <div id="fullScreenMessageIcon"></div>
+        <div id="fullScreenMessageCenter" class="baseColor">
+            <div id="fullScreenMessageTextWrapper">
+                <span id="fullScreenMessageLoadingIcon" class="loadingAnimation-large"></span>
+                <div id="fullScreenMessageTitle" role="heading" aria-level="1"></div>
+                <div id="fullScreenMessageText" role="status"></div>
+                <div id="fullScreenMessageButtonWrapper">
+                    <span id="fullScreenMessageButtons"></span>
+                    <input type="button" id="closeWindow" value="Close Window">
+                </div>
+                <div id="fullScreenProgressWrapper" style="display: none;">
+                    <div id="fullScreenProgressText"></div>
+                    <div id="fullScreenProgressBar" class="primary-color-low-opacity-background">
+                        <div id="fullScreenProgressFill" class="primary-color-background"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="examResultDetails" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="ExamResultDetailsTitle">
+        <div id="examResultDetailsHeader"></div>
+        <div id="examResultDetailsCenter" class="baseColor">
+            <div id="examResultDetailsWrapper">
+                <div id="examResultDetailsTitle"></div>
+                <div id="examResultDetailsText"></div>
+                <div id="examResultDetailsButtonWrapper">
+                    <span id="examResultDetailsButtons"></span>
+                    <input type="button" id="closeWindow" value="Close Window">
+                </div>
+                <div id="exResultDetailsProgressWrapper" style="display: none;">
+                    <div id="examResultDetailsProgressText"></div>
+                    <div id="examResultDetailsProgressBar">
+                        <div id="examResultDetailsProgressFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <textarea id="copyInput" style="position: absolute; left: -10000px; top: -10000px; display: none;"></textarea>
+
+    <script>
+    var model = {
+        id: 57057083,
+        key: "a9b8f509-8cef-49ee-a156-a31dfb982be0",
+        labProfileId: "190370",
+        instructionsSetId: "296912",
+        layoutVersion: 2,
+        isPreview: false,
+        isThemePreview: false,
+previewKey: null,        helpTabLabel: "Help",
+        monitor: false,
+        takeControl: false,
+        allowUserTransferSaves: false,
+        userId: "8287944",
+        userFullName: "Amala R Ravichandran",
+        publishKey: "pub-c-4b0a6a73-e675-4561-b40f-cee58350bb9f",
+        subscribeKey: "sub-c-9c6a8086-0758-11eb-8c73-de77696b0464"
+    };
+        
+    </script>
+
+    
+    <script>
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        // Checking to see if the disabledTracking cookie is set to drive pendo initialization for running playwrite tests without Pendo intervention.
+        if(getCookie("disabledTracking") != "true") {
+            (function (apiKey) {
+            (function (p, e, n, d, o) {
+                var v, w, x, y, z; o = p[d] = p[d] || {}; o._q = o._q || [];
+                v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track']; for (w = 0, x = v.length; w < x; ++w)(function (m) {
+                    o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
+                })(v[w]);
+                y = e.createElement(n); y.async = !0; y.src = 'https://content.analytics.learnondemandsystems.com/agent/static/' + apiKey + '/pendo.js';
+                z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
+            })(window, document, 'script', 'pendo');
+
+            pendo.initialize({
+                visitor: {
+                    id: "tms-5305507",
+                    platform: "lod",
+                    iem: false,
+                    labAuthor: false,
+                    instructionsAuthor: false
+                },
+                account: {
+                id: "4274",
+                orgId: "2479",
+                name: "Microsoft Future Skills Initiative - Production",
+                platform: "lod"
+            }
+
+            });
+        })("536f12da-8330-4d47-64ff-6133e760c5d2");
+        }
+    </script>
+
+    
+    <script>
+      (function(h,o,u,n,d) {
+        h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+        d=o.createElement(u);d.async=1;d.src=n
+        n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+        })(window,document,'script','https://www.datadoghq-browser-agent.com/us3/v6/datadog-logs.js','DD_LOGS')
+      window.DD_LOGS.onReady(function() {
+          window.DD_LOGS.init({
+            clientToken: 'pub95df9c2772f25cae094492ee095d1bca',
+            site: 'us3.datadoghq.com',
+            env: 'prod',
+            service: 'lab-client-frontend',
+            forwardErrorsToLogs: true,
+            telemetrySampleRate: 100,
+            trackSessionAcrossSubdomains: true,
+            forwardConsoleLogs: ['error', 'warn'],
+          })
+        })
+    </script>
+
+    
+<script>
+    let iFrameDetectorModel = {
+        requireIFrame: false
+    };
+
+    function isInIFrame() {
+        return (window === window.parent) ? false : true;
+    }
+
+    $(function () {
+        if (iFrameDetectorModel.requireIFrame && !isInIFrame()) {
+            window.location.href = "/AccessDenied";
+        };
+    });
+
+</script>
+
+
+
+</body></html>

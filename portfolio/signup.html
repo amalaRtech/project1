@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet"   href="./index.css">
+    <link rel="icon" href="./image/free girl.jpg">
+</head>
+
+<body>
+    <div class="signup-container">
+            <h1>Create a Account</h1><br>
+            <form id="signupform">
+                <label>Enter the name:</label>
+                <input type="text" id="user" required><br><br>
+                <label>Enter the Email Id:</label>
+                <input type="email" id="email" required><br><br>
+                <label>Enter the password:</label>
+                <input type="password" id="password" required><br><br>
+                <button type="submit">Sign Up</button>
+            </form>
+
+    </div>
+    <script>
+        document.getElementById("signupform")?.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            const usname = document.getElementById("user").value;
+            console.log("User signed up:", usname);
+            localStorage.setItem('name',usname);
+        
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
